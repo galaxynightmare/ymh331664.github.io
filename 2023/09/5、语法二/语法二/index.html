@@ -1,0 +1,374 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>ABAP语法二 | 空尘</title><meta name="author" content="空尘"><meta name="copyright" content="空尘"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="ABAP基本语法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ABAP语法二">
+<meta property="og:url" content="https://galaxynightmare.gitee.io/2023/09/5%E3%80%81%E8%AF%AD%E6%B3%95%E4%BA%8C/%E8%AF%AD%E6%B3%95%E4%BA%8C/index.html">
+<meta property="og:site_name" content="空尘">
+<meta property="og:description" content="ABAP基本语法">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://galaxynightmare.gitee.io/2023/09/5%E3%80%81%E8%AF%AD%E6%B3%95%E4%BA%8C/%E8%AF%AD%E6%B3%95%E4%BA%8C/image-20231114145048071.png">
+<meta property="article:published_time" content="2023-09-05T11:42:11.000Z">
+<meta property="article:modified_time" content="2023-11-16T13:51:59.668Z">
+<meta property="article:author" content="空尘">
+<meta property="article:tag" content="ABAP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://galaxynightmare.gitee.io/2023/09/5%E3%80%81%E8%AF%AD%E6%B3%95%E4%BA%8C/%E8%AF%AD%E6%B3%95%E4%BA%8C/image-20231114145048071.png"><link rel="shortcut icon" href="/img/head.jpg"><link rel="canonical" href="https://galaxynightmare.gitee.io/2023/09/5%E3%80%81%E8%AF%AD%E6%B3%95%E4%BA%8C/%E8%AF%AD%E6%B3%95%E4%BA%8C/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"作者: 空尘","link":"链接: ","source":"来源: 空尘","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'ABAP语法二',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-11-16 21:51:59'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="/css/font.css"><link rel="stylesheet" type="text/css" href="/css/heoMainColor.css"><link rel="stylesheet" type="text/css" href="/css/poem.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/bb/showbb_in_index.css"><link rel="stylesheet" type="text/css" href="/css/windmill.css"><link rel="stylesheet" type="text/css" href="/css/MyStyl.css"><link rel="stylesheet" type="text/css" href="/css/music2.css"><link rel="stylesheet" href="/css/essay_page/essay_page.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<link rel="stylesheet" href="/css/categorybar_shouye.css"><link rel="stylesheet" href="/css/swiper/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/css/swiper/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/css/animate.min.css" media="print" onload="this.media='screen'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><!--if theme.preloader.source === 1--><!--  include ./fullpage-loading.pug--><!--else--><!--  include ./pace.pug--><!--#loading-box--><!--  .loading-left-bg--><!--  .loading-right-bg--><!--  .spinner-box--><!--    .configure-border-1--><!--      .configure-core--><!--    .configure-border-2--><!--      .configure-core--><!--    .loading-word= _p('loading')--><!----><!--script.--><!--  (()=>{--><!--    const $loadingBox = document.getElementById('loading-box')--><!--    const $body = document.body--><!--    const preloader = {--><!--      endLoading: () => {--><!--        $body.style.overflow = ''--><!--        $loadingBox.classList.add('loaded')--><!--      },--><!--      initLoading: () => {--><!--        $body.style.overflow = 'hidden'--><!--        $loadingBox.classList.remove('loaded')--><!--      }--><!--    }--><!----><!--    preloader.initLoading()--><!--    window.addEventListener('load',() => { preloader.endLoading() })--><!----><!--    if (!{theme.pjax && theme.pjax.enable}) {--><!--      document.addEventListener('pjax:send', () => { preloader.initLoading() })--><!--      document.addEventListener('pjax:complete', () => { preloader.endLoading() })--><!--    }--><!--  })()--><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="/css/loading_bar.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="an_music_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-zhuye-"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-yuedu"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw iconfont icon-fenlei"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw iconfont icon-biaoqian"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-shijianzhou2"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-xiuxian"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/essay/"><i class="fa-fw iconfont icon-riji"></i><span> 即刻说</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw iconfont icon-tupian"></i><span> 图册集</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-xiuxianyule"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw iconfont icon-yinle"></i><span> 音乐馆</span></a></li><li><a class="site-page child" href="/collect/"><i class="fa-fw iconfont icon-youxi"></i><span> 工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-wode"></i><span> 关于</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw iconfont icon-wode"></i><span> 空尘</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw iconfont icon-youqinglianjie"></i><span> 友链</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><!-- - var top_img = page.top_img || page.cover || theme.default_top_img--><header class="post-bg fixed" id="page-header"><nav id="nav"><span id="blog-info" style="margin-right: 120px"><a href="/" title="空尘"><span class="site-name">空尘</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="iconfont icon-sousuo"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-zhuye-"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-yuedu"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw iconfont icon-fenlei"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw iconfont icon-biaoqian"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw iconfont icon-shijianzhou2"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-xiuxian"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/essay/"><i class="fa-fw iconfont icon-riji"></i><span> 即刻说</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw iconfont icon-tupian"></i><span> 图册集</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-xiuxianyule"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw iconfont icon-yinle"></i><span> 音乐馆</span></a></li><li><a class="site-page child" href="/collect/"><i class="fa-fw iconfont icon-youxi"></i><span> 工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-wode"></i><span> 关于</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="fa-fw iconfont icon-wode"></i><span> 空尘</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw iconfont icon-youqinglianjie"></i><span> 友链</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">ABAP语法二</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="iconfont icon-riqi"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-09-05T11:42:11.000Z" title="发表于 2023-09-05 19:42:11">2023-09-05</time><span class="post-meta-separator">|</span><i class="iconfont icon-gengxin"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-11-16T13:51:59.668Z" title="更新于 2023-11-16 21:51:59">2023-11-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="iconfont icon-yewuleibie-1"></i><a class="post-meta-categories" href="/categories/ABAP/">ABAP</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="ABAP语法二"><i class="iconfont icon-yanjing"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="内表"><a href="#内表" class="headerlink" title="内表"></a>内表</h1><p>内表是内存中建立的一个临时表，你可以在程序运行时对表中的数据进行，插入，修改，删除等操作，程序跑完了，就会被释放。</p>
+<p>内表是一种十分灵活的大批量数据管理形式，用于在程序运行期间存储多行结构相同的数据。内表的行结构可以是一个简单类型数据，也可以是复杂的结构体甚至内表。而内表的行数是动态的，添加数据后可以循环读取每行数据或者整体操作。内表的使用在 SAP 程序设计中相当重要，因而 ABAP 中提供许多内表处理语句，可以说没有一个实际应用程序中不需要使用到内表。</p>
+<h2 id="内表的种类"><a href="#内表的种类" class="headerlink" title="内表的种类"></a>内表的种类</h2><ul>
+<li>标准表，表类型关键字为 STANDARD TABLE，系统为该表的每一行数据生成一个逻辑索引。填充标准表时，可以将数据附加在现有行之后，也可以插入到指定的位置，程序对内表行的寻址操作可通过关键字或索引进行。在对表进行插入、删除等操作时，各数据行在内存中的位置不变，系统仅重新排列各数据行的索引值。</li>
+<li>排序表，表类型关键字为 SORTED TABLE，也具有一个逻辑索引，不同之处是排序表总是按其表关键字升序排序后再进行存储，其访问方式与标准表相同。</li>
+<li>哈希表，表类型关键字为 HASHED TABLE，没有索引，只能通过关键字来访问。系统用哈希算法管理表中的数据，因而其寻址一个数据行的时间与表的行数无关。</li>
+</ul>
+<h2 id="表关键字"><a href="#表关键字" class="headerlink" title="表关键字"></a>表关键字</h2><p>内表的表关键字在访问内表和内表排序的过程中起着相当重要的作用，在内表定义语句中，使用WITH key指定表关键字，该项为可选项，如果不指定，则系统会使用默认（标准）关键字，如果程序员指定表关键字，则有下列形式：</p>
+<p>如果内表行结构是结构体，则可以指定结构体中的某几个字段作为内表关键字，该字段不能是内表或者引用类型，但可以是嵌套结构体。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">... WITH [UNIQUE NON-UNIQUE] KEY comp: ... comp,<br></code></pre></td></tr></table></figure>
+<p>如果内表的整个行都是由基本类型字段组成的，则可以把内表整行指定为表关键字。如果内表字段本身是结构化类型，则不宜指定整行作为关键字段。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">... WITH [UNIQUE NON-UNIQUE]KEY TABLE LINE<br></code></pre></td></tr></table></figure>
+<p>如果不指定任何关键字，则可以使用默认的标准关键字，该选项为默认选项。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">... WITH [UNIQUE NON-UNIQUE]DEFAULT KEY<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">标准表：TYPE TABLE OF、TYPE STANDARD TABLE OF<br>排序表：TYPE SORTED TABLE OF MARC WITH NON-UNIQUE (UNIQUE) KEY K1 K2 KN.<br>哈希表：TYPE HASHED TABLE OF WITH UNIQUE KEY K1 K2 KN.<br></code></pre></td></tr></table></figure>
+<h2 id="初始内存大小"><a href="#初始内存大小" class="headerlink" title="初始内存大小"></a>初始内存大小</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">... INITIAL SIZE n<br></code></pre></td></tr></table></figure>
+<p>n值可以为0或者任何正数，除非系统管理员限定一个最大值。无论n值选择为多大，都不会影响程序的正确性，但可能会影响程序效率。如果初始n值小于所需，系统会根据需要自动要求增加内存大小，这个过程需要占用一定的时间，如果n值过大，实际数据的行数少于定义，则会造成内存分配的浪费。所以n值的选择应该尽量接近于实际的需要。如果n值为0或不指定的话，程序会为内表对象分配8KB大小的内存。所以，如果内表比较小，不要把该值设为0，以避免内存浪费。</p>
+<h1 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h1><p>程序对内表的行操作不能直接进行，必须通过一种接口来传输，这个接口就是工作区（Work Area，见图）。比如某程序需要从关系数据库中提取数据到内表各行中，必须先将数据读入工作区，然后把工作区中的数据赋给内表的行。工作区必须具有和内表行一致或者可相互转换的数据结构（一般是与内表行类型相同的结构体）。</p>
+<p><img src="/2023/09/5%E3%80%81%E8%AF%AD%E6%B3%95%E4%BA%8C/%E8%AF%AD%E6%B3%95%E4%BA%8C/image-20231114145048071.png" alt="image-20231114145048071"></p>
+<p>因此在定义内表对象的同时，还需要定义一个与该内表行结构相同的工作区对象供程序使用，将数据写入内表时，必须首先给工作区赋值，然后在工作区添加或者插入内表。</p>
+<h2 id="表头行"><a href="#表头行" class="headerlink" title="表头行"></a>表头行</h2><p>ABAP 为程序员提供了一种简单的方法:在创建内表对象的同时可以隐式地定义一个同名工作区，这个同名工作区就叫做表头行或标题行（Header Line），也称作内表工作区。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">DATA itab ... WITH HEADER LINE ...<br></code></pre></td></tr></table></figure>
+<p>创建内表时，程序员通过该附加项可以决定内表带表头行或不带表头行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">DATA itab_company LIKE TABLE OF company<br>			WITH UNIQUE KEY namew<br>			WITH HEADER LINE.<br></code></pre></td></tr></table></figure>
+<p>创建了带表头行的内表之后，可以认为程序中存在两个数据对象，一个是内表，另一个是与内表行类型相同的结构体。在所有用于操作内表的 ABAP 语句中，均需要指定工作区。但对于带表头行的内表，则可以忽略这一指定，系统隐式使用表头行作为工作区，不等于没有用到工作区。不带表头行的内表没有隐式的工作区，所以要访问没有表头行的内表，必须在相应的 ABAP 语句中显式指定工作区（见图）。</p>
+<p><img src="/2023/09/5%E3%80%81%E8%AF%AD%E6%B3%95%E4%BA%8C/%E8%AF%AD%E6%B3%95%E4%BA%8C/image-20231114151554584.png" alt="image-20231114151554584"></p>
+<p>这在给内表操作带来方便的同时也明显增加了混淆，对于既可以操作内表、又可以操作工作区的语句来说，有时不能单独从语法上判断操作对象，需要进行逻辑分析。如果一个语句中，该名称同时可能代表内表或者同名表工作区，则需要在内表名称之后加“[]”指明当前操作的是内表对象。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">itab[]<br></code></pre></td></tr></table></figure>
+<p>因此笔者不提倡读者使用带有表头行的内表，而是应该总是声明结构相同的其他数据对象作为显示工作区进行内表行操作。</p>
+<p>在实际业务中，一般使用定义结构体类型后直接参照此类型定义内表和工作区。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">TYPES:<br>  BEGIN OF TY_MARC,<br>    MATNR TYPE MARC-MATNR, &quot;物料编号<br>    WERKS TYPE MARC-WERKS, &quot;工厂<br>    BESKZ TYPE MARC-BESKZ, &quot;采购类型<br>    EKGRP TYPE MARC-EKGRP, &quot;采购组<br>    BSTMI TYPE MARC-BSTMI, &quot;最小批量<br>  END OF TY_MARC.<br><br>DATA:<br>  GT_MARC TYPE STANDARD TABLE OF TY_MARC,  &quot;内表  定义基本表可省略 STANDARD<br>  GS_MARC TYPE TY_MARC.  &quot;工作区<br>  <br>参照已定义的内表定义<br>DATA &lt;ITAB&gt; LIKE &lt;内表&gt;<br><br>参照结构或者数据库定义<br>DATA &lt;ITAB&gt; TYPE TABLE OF &lt;结构/表&gt;<br>GT_MARC TYPE TABLE OF TY_MARC<br>GT_MARC TYPE TABLE OF MARC<br></code></pre></td></tr></table></figure>
+<p>其他定义形式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">DATA:BEGIN OF itab_company OCCURS 10,<br>	  name(20) TYPE c,<br>	  address TYPE address,<br>	EDN OF itab_company.<br></code></pre></td></tr></table></figure>
+<p>实际上这段语句也声明了一个标准内表，自带工作区，并分配初始内存大小为10行，OCCURS 是ABAP3.0之前声明内表的关键字选项，不建议读者使用，但由于有时系统维护时需要接触旧的 ABAP 代码，这里简单说明一下。</p>
+<h1 id="例"><a href="#例" class="headerlink" title="例"></a>例</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">*自定义类型内表<br>TYPES:<br>  BEGIN OF TY_ITAB, &quot;结构类型<br>    FIELD1 TYPE CHAR10,<br>    FIELD2 TYPE INT2,<br>  END OF TY_ITAB.<br><br>TYPES: T_ITAB1 TYPE TY_ITAB OCCURS 0. &quot;表类型<br>TYPES: T_ITAB2 TYPE TABLE OF TY_ITAB. &quot;表类型<br><br>DATA:<br>      ITAB1 TYPE TABLE OF TY_ITAB,  &quot;内表，参考结构<br>      ITAB2 TYPE T_ITAB1,<br>      ITAB3 TYPE T_ITAB2,<br>      ITAB4 LIKE ITAB1,  &quot;参考已定义的表<br>      ITAB11 TYPE TABLE OF MARC.  &quot;参考数据库表<br><br>*直接定义,定义内表，同时定义同名工作区<br>DATA:<br>      BEGIN OF ITAB5 OCCURS 0,<br>        FIELD1 TYPE CHAR10,<br>        FIELD2 TYPE INT2,<br>      END OF ITAB5.<br><br>BREAK-POINT.  &quot;断点方法<br><br>F5 单行执行，每一行都执行<br>F6 直接执行单行语句，不跳进函数<br>F7 跳出当前函数<br>F8 继续执行，执行完，或者到下一个断点<br></code></pre></td></tr></table></figure>
+<p><img src="/2023/09/5%E3%80%81%E8%AF%AD%E6%B3%95%E4%BA%8C/%E8%AF%AD%E6%B3%95%E4%BA%8C/image-20231116115658096.png" alt="image-20231116115658096"></p>
+<h1 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h1><p>数据定义（data definitions）：</p>
+<p> 结构（variable type） :  TY_</p>
+<p>全局变量（global variable）： GV_</p>
+<p>局部变量（local variable ）： LV_</p>
+<p>全局内表（global internal table）:GT_</p>
+<p>全局工作区（global work area）：GS_</p>
+<p>局部内表（local internal table ）: LT_</p>
+<p>本地工作区（local work area）： LS_</p>
+<h1 id="内表操作"><a href="#内表操作" class="headerlink" title="内表操作"></a>内表操作</h1><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>内表的初始化</p>
+<p>CLEAR GS_MARC.    “清空工作区</p>
+<p>CLEAR GT_MARC.    “清空内表</p>
+<p>REFRESH GT_MARC.    “清空并释放内存空间</p>
+<p>FREE GT_MARC.    “释放内表空间</p>
+<h2 id="INSERT"><a href="#INSERT" class="headerlink" title="INSERT"></a>INSERT</h2><p>将新行插入到内表中的指定位置，需要使用 INSERT 语句。对于索引表，可以指定某行的索引，则新行将插入该索引所代表的行之前，对于哈希表而言，不能指定行的索引，系统会按照关键字将新行插入其特定位置。给内表插入行可以为单行，也可为多行，甚至可把整个内表的数据插入其他内表中。</p>
+<p>通过索引插入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">INSERT line INTO itab INDEX idx<br></code></pre></td></tr></table></figure>
+<p>一般性插入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">INSERT line INTO TABLE itab<br></code></pre></td></tr></table></figure>
+<p>但语句中增加了 TABLE 关键字，对于不同的类型的内表，其意义和用法是有区别的：</p>
+<ul>
+<li>对于标准表而言，该形式不指定索引值，附加至表最后一行，与 APPEND 语句效果完全一致；</li>
+<li>对于排序表来说，插入的行不可以打乱按照关键字排序的顺序，否则插入不成功；</li>
+<li>对于哈希表来说，插入过程中系统按照关键宇对行进行定位。</li>
+</ul>
+<p>还可以将内表中部分或全部的数据行整体插入到另一个内表中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">INSERT LIENS OF itab1 [FROM n1] [TO n2] INTO [TABLE] itab2 [INDEX idx] .<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">TYPES:<br>  BEGIN OF TY_MARC,<br>    MATNR TYPE MARC-MATNR, &quot;物料编号<br>    WERKS TYPE MARC-WERKS, &quot;工厂<br>    BESKZ TYPE MARC-BESKZ, &quot;采购类型<br>    EKGRP TYPE MARC-EKGRP, &quot;采购组<br>    BSTMI TYPE MARC-BSTMI, &quot;最小批量<br>  END OF TY_MARC.<br><br>DATA:<br>  GT_MARC TYPE TABLE OF TY_MARC,  &quot;内表<br>  GS_MARC TYPE TY_MARC.  &quot;工作区<br><br>GS_MARC-MATNR = &#x27;11111&#x27;.   &quot;物料编号<br>GS_MARC-WERKS = &#x27;101&#x27;.    &quot;工厂<br>GS_MARC-BESKZ = &#x27;a&#x27;.   &quot;采购类型<br>GS_MARC-EKGRP = &#x27;GR&#x27;.	&quot;采购组<br>GS_MARC-BSTMI = &#x27;12&#x27;.	&quot;最小批量<br><br>insert GS_MARC INTO GT_MARC index 1.  &quot;根据索引插入<br>*insert GS_MARC INTO TABLE GT_MARC.  &quot;根据关键字插入<br>*insert LIENS OF GT_MARC1 FROM 1 TO 3 INTO GT_MARC2.  &quot;插入多行 从1到3行<br>*insert LIENS OF GT_MARC1 INTO GT_MARC2.  &quot;插入多行<br><br>CLEAR GS_MARC.	&quot;一般用工作区之前或之后清除一下工作区<br><br>LOOP AT GT_MARC INTO GS_MARC.<br>  WRITE: / GS_MARC-MATNR,GS_MARC-WERKS,GS_MARC-BESKZ,GS_MARC-EKGRP,GS_MARC-BSTMI.<br>ENDLOOP.<br></code></pre></td></tr></table></figure>
+<h2 id="APPEND"><a href="#APPEND" class="headerlink" title="APPEND"></a>APPEND</h2><p>附加行是在一个已经存在的索引表（该内表可以为空）中使用 APPEND 语句增添新行。该语句只能操作索引表，哈希表不是以索引作为行的寻址方式，没有系统索引，因而也就不能通过索引进行附加操作。APPEND 语句有几种形式，可以分别附加一或多行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">GS_MARC-MATNR = &#x27;22222&#x27;.  &quot;物料编号<br>GS_MARC-WERKS = &#x27;101&#x27;.  &quot;工厂<br>GS_MARC-BESKZ = &#x27;a&#x27;.	&quot;采购类型<br>GS_MARC-EKGRP = &#x27;GR&#x27;.	&quot;采购组<br>GS_MARC-BSTMI = &#x27;12&#x27;.	&quot;最小批量<br><br>APPEND GS_MARC TO GT_MARC.<br>*APPEND LIENS OF GT_MARC1 TO GT_MARC2.&quot;插入多行<br>*APPEND LIENS OF GT_MARC1 FROM 1 TO 3 TO GT_MARC2.&quot;插入多行<br>CLEAR GS_MARC.<br></code></pre></td></tr></table></figure>
+<h2 id="COLLECT"><a href="#COLLECT" class="headerlink" title="COLLECT"></a>COLLECT</h2><p>由于在索引表中行与行之间数据具有可重复性，如果使用 APPEND 语句附加行，则多个具有相同表关键字段值的数据行（甚至完全相同的数据行）可以同时存在于一个内表对象中。如果希望在内表中表关键字段能够唯一性确定数据行（即有相同关键学段值的数据行不能重复出现)，应该使用 COLLECT 语句根据表关键字附加行，该操作可以应用于所有种类的内表，但是其效果与按照索引附加行是有区别的。</p>
+<p>操作时，系统将检查工作区中的标准关键字段值与已经存在于内表中的数据行是否相同（所有非数字字段）。如果不同，COLLECT 语句的作用与 APPEND 语句相似，将新行附加至内表末尾。如果已存在相同表关键字值的行，COLLECT 语句不附加新行，而是将工作区中数字字段的内容累加到已有数据行（该行与工作区具有相同的表关键字值）中数字字段内容之上。操作成功之后，系统字段 SY-TABIX 包含处理过的行的索引。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">TYPES:<br>  BEGIN OF TY_MARC,<br>    MATNR TYPE MARC-MATNR, &quot;物料编号<br>    WERKS TYPE MARC-WERKS, &quot;工厂<br>    BESKZ TYPE MARC-BESKZ, &quot;采购类型<br>    EKGRP TYPE MARC-EKGRP, &quot;采购组<br>    BSTMI TYPE MARC-BSTMI, &quot;最小批量<br>  END OF TY_MARC,<br><br>*根据物料编号和工厂判断，两个都一致，合并COL的数据，合并数值字段。  <br>*声明时把非数值字段放到下面 只相加i类型<br>  BEGIN OF TY_MARC1,<br>    MATNR TYPE MARC-MATNR, &quot;物料编号<br>    WERKS TYPE MARC-WERKS, &quot;工厂<br>    COL   TYPE I,  &quot;数量<br>  END OF TY_MARC1.<br><br>DATA:<br>  GT_MARC  TYPE STANDARD TABLE OF TY_MARC,  &quot;内表<br>  GS_MARC  TYPE TY_MARC,  &quot;工作区<br><br>  GT_MARC1 TYPE STANDARD TABLE OF TY_MARC1,  &quot;内表<br>  GS_MARC1 TYPE TY_MARC1.  &quot;工作区<br><br>GS_MARC1-MATNR = &#x27;11111&#x27;.&quot;物料编号<br>GS_MARC1-WERKS = &#x27;101&#x27;.  &quot;工厂<br>GS_MARC1-COL = 10.  &quot;数量<br>COLLECT GS_MARC1 INTO GT_MARC1.<br>CLEAR GS_MARC1.<br><br>GS_MARC1-MATNR = &#x27;11111&#x27;.&quot;物料编号<br>GS_MARC1-WERKS = &#x27;101&#x27;.  &quot;工厂<br>GS_MARC1-COL = 20.  &quot;数量<br>COLLECT GS_MARC1 INTO GT_MARC1.<br>CLEAR GS_MARC1.<br><br>GS_MARC1-MATNR = &#x27;22222&#x27;.&quot;物料编号<br>GS_MARC1-WERKS = &#x27;101&#x27;.  &quot;工厂<br>GS_MARC1-COL = 10.  &quot;数量<br>COLLECT GS_MARC1 INTO GT_MARC1.<br>CLEAR GS_MARC1.<br><br>LOOP AT GT_MARC1 INTO GS_MARC1.<br>  WRITE: / GS_MARC1-MATNR,GS_MARC1-WERKS,GS_MARC1-COL.<br>ENDLOOP.<br></code></pre></td></tr></table></figure>
+<p><img src="/2023/09/5%E3%80%81%E8%AF%AD%E6%B3%95%E4%BA%8C/%E8%AF%AD%E6%B3%95%E4%BA%8C/image-20230830145211391.png" alt="image-20230830145211391"></p>
+<p>如图所示，内表 itab 中已经存在4行数据，其中CARR、CONN是表关键字段，是一个航空数据系统中的公司 ID 和航线ID，UMSATZ代表总的机票收入。如果此时添加一行新数据，该数据仍然是LH的0400航班。如果使用APPEND语句，则内表变为5行，如果使用COLLECT语句,则在LH的0400航班原有基础上将收入累加。</p>
+<p><img src="/2023/09/5%E3%80%81%E8%AF%AD%E6%B3%95%E4%BA%8C/%E8%AF%AD%E6%B3%95%E4%BA%8C/image-20231116164443651.png" alt="image-20231116164443651"></p>
+<h2 id="MODIFY"><a href="#MODIFY" class="headerlink" title="MODIFY"></a>MODIFY</h2><p>使用MODIFY语句更改内表的数据行可以通过索引或关键字进行。根据索引更改内表的语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">GS_MARC-MATNR = &#x27;44444&#x27;.  &quot;物料编号<br>GS_MARC-WERKS = &#x27;104&#x27;.  &quot;工厂<br>GS_MARC-BESKZ = &#x27;b&#x27;.  &quot;采购类型<br>GS_MARC-EKGRP = &#x27;GR&#x27;.	&quot;采购组<br>GS_MARC-BSTMI = &#x27;12&#x27;.	&quot;最小批量<br><br>*MODIFY GT_MARC FROM GS_MARC INDEX 2.  &quot;更改整行数据<br>MODIFY GT_MARC FROM GS_MARC INDEX 2 TRANSPORTING WERKS.  &quot;更改某个字段的值<br>MODIFY GT_MARC FROM GS_MARC TRANSPORTING WERKS WHERE MATNR = &#x27;22222&#x27;.  &quot;根据WHERE条件更改某个字段的值<br>CLEAR GS_MARC.<br></code></pre></td></tr></table></figure>
+<h2 id="READ"><a href="#READ" class="headerlink" title="READ"></a>READ</h2><h2 id="DELETE"><a href="#DELETE" class="headerlink" title="DELETE"></a>DELETE</h2><p>对于索引表，可以使用有INDEX选项的DELETE语句通过索引删除行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">DELETE GT_MARC INDEX 1.<br></code></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://galaxynightmare.gitee.io">空尘</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://galaxynightmare.gitee.io/2023/09/5%E3%80%81%E8%AF%AD%E6%B3%95%E4%BA%8C/%E8%AF%AD%E6%B3%95%E4%BA%8C/">https://galaxynightmare.gitee.io/2023/09/5%E3%80%81%E8%AF%AD%E6%B3%95%E4%BA%8C/%E8%AF%AD%E6%B3%95%E4%BA%8C/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://galaxynightmare.gitee.io" target="_blank">空尘</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/ABAP/">ABAP</a></div><div class="post_share"><div class="social-share" data-image="/2023/09/5%E3%80%81%E8%AF%AD%E6%B3%95%E4%BA%8C/%E8%AF%AD%E6%B3%95%E4%BA%8C/image-20231114145048071.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/08/Hexo-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="Hexo+GitHub搭建个人博客"><img class="cover" src="/2023/08/Hexo-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/image-20230805221620192.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hexo+GitHub搭建个人博客</div></div></a></div><div class="next-post pull-right"><a href="/2023/09/4%E3%80%81%E8%AF%AD%E6%B3%95%E4%B8%80/%E8%AF%AD%E6%B3%95%E4%B8%80/" title="ABAP语法一"><img class="cover" src="/2023/09/4%E3%80%81%E8%AF%AD%E6%B3%95%E4%B8%80/%E8%AF%AD%E6%B3%95%E4%B8%80/image-20231114145048071.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">ABAP语法一</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/09/4%E3%80%81%E8%AF%AD%E6%B3%95%E4%B8%80/%E8%AF%AD%E6%B3%95%E4%B8%80/" title="ABAP语法一"><img class="cover" src="/2023/09/4%E3%80%81%E8%AF%AD%E6%B3%95%E4%B8%80/%E8%AF%AD%E6%B3%95%E4%B8%80/image-20231114145048071.png" alt="cover"><div class="content is-center"><div class="date"><i class="iconfont icon-a-012_yuyueshijian fa-fw"></i> 2023-09-05</div><div class="title">ABAP语法一</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><!--.author_top.is-center--><div class="is-center"><!--.avatar-img--><!--  img(src=url_for(theme.avatar.img) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt="avatar")--><div class="card-info-avatar"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-status-box"><div class="author-status"><g-emoji class="g-emoji" alias="palm_tree">🐟</g-emoji><span>认真摸鱼中</span></div></div></div><div class="author-info__name">空尘</div><div class="author-info__description">归途也还可爱</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/galaxynightmare" target="_blank" title="Github"><i class="iconfont icon-github_icon" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:ymh331664@163.com" target="_blank" title="Email"><i class="iconfont icon-youxiang1" style="color: #4a7dbe;"></i></a><a class="social-icon" href="tencent://message/?uin=1543016589&amp;Site=Sambow&amp;Menu=yes" target="_blank" title="QQ"><i class="iconfont icon-qq"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E8%A1%A8"><span class="toc-number">1.</span> <span class="toc-text">内表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E8%A1%A8%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="toc-number">1.1.</span> <span class="toc-text">内表的种类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.2.</span> <span class="toc-text">表关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%86%85%E5%AD%98%E5%A4%A7%E5%B0%8F"><span class="toc-number">1.3.</span> <span class="toc-text">初始内存大小</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="toc-number">2.</span> <span class="toc-text">工作区</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E5%A4%B4%E8%A1%8C"><span class="toc-number">2.1.</span> <span class="toc-text">表头行</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BE%8B"><span class="toc-number">3.</span> <span class="toc-text">例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-number">4.</span> <span class="toc-text">命名规则</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E8%A1%A8%E6%93%8D%E4%BD%9C"><span class="toc-number">5.</span> <span class="toc-text">内表操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">5.1.</span> <span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#INSERT"><span class="toc-number">5.2.</span> <span class="toc-text">INSERT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#APPEND"><span class="toc-number">5.3.</span> <span class="toc-text">APPEND</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#COLLECT"><span class="toc-number">5.4.</span> <span class="toc-text">COLLECT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MODIFY"><span class="toc-number">5.5.</span> <span class="toc-text">MODIFY</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#READ"><span class="toc-number">5.6.</span> <span class="toc-text">READ</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DELETE"><span class="toc-number">5.7.</span> <span class="toc-text">DELETE</span></a></li></ol></li></ol></div></div><div class="card-widget" id="card-poem"><div id="poem_sentence"></div><div id="poem_info"><div id="poem_dynasty"></div><div id="poem_author"></div></div></div><script src="/js/jinrishici.js" charset="utf-8"></script><script type="text/javascript">jinrishici.load(function(result) {
+    var sentence = document.querySelector("#poem_sentence")
+    var author = document.querySelector("#poem_author")
+    var dynasty = document.querySelector("#poem_dynasty")
+
+    var sentenceText = result.data.content
+    sentenceText = sentenceText.substr(0, sentenceText.length - 1);
+    sentence.innerHTML = sentenceText
+    dynasty.innerHTML = result.data.origin.dynasty
+    author.innerHTML = result.data.origin.author + '《' + result.data.origin.title + '》'
+});</script></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By 空尘</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">welcome to <a target="_blank" rel="noopener" href="https://galaxynightmare.github.io/">kongchen's blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><div class="js-pjax"></div><script src="/js/jquery.js"></script><script src="/js/foot.js"></script><script src="/js/jinrishici.js"></script><script src="/js/categoryBar.js"></script><script async data-pjax src="/js/custom.js"></script><script async data-pjax src="/js/waterfall/waterfall.js"></script><script async data-pjax src="/js/Meting2.min.js"></script><script async data-pjax src="/js/web-title.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(img/Hexo.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/hexo/&quot;);" href="javascript:void(0);">hexo</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">Hexo</span></li><li class="categoryBar-list-item" style="background:url(img/ABAP.jpg);"> <a class="categoryBar-list-link" onclick="pjax.loadUrl(&quot;categories/ABAP/&quot;);" href="javascript:void(0);">ABAP</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">ABAP</span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/09/5、语法二/语法二/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="2023/09/5、语法二/语法二/image-20231114145048071.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-09-05</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/09/5、语法二/语法二/&quot;);" href="javascript:void(0);" alt="">ABAP语法二</a><div class="blog-slider__text">ABAP基本语法</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/09/5、语法二/语法二/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/09/4、语法一/语法一/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="2023/09/4、语法一/语法一/image-20231114145048071.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-09-05</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/09/4、语法一/语法一/&quot;);" href="javascript:void(0);" alt="">ABAP语法一</a><div class="blog-slider__text">ABAP基本语法</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/09/4、语法一/语法一/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;2023/08/Hexo-GitHub搭建个人博客/&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src="2023/08/Hexo-GitHub搭建个人博客/image-20230805221620192.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-08-05</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;2023/08/Hexo-GitHub搭建个人博客/&quot;);" href="javascript:void(0);" alt="">Hexo+GitHub搭建个人博客</a><div class="blog-slider__text">本文介绍使用Hexo搭建静态个人博客，托管在GitHub，不需要购买服务器，纯免费，这也是我的第一个博客。</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;2023/08/Hexo-GitHub搭建个人博客/&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="/js/swiper/swiper.min.js"></script><script defer data-pjax src="/js/swiper/swiper_init.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '1s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '100');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="/js/wow/wow.min.js"></script><script defer src="/js/wow/wow_init.js"></script><!-- hexo injector body_end end --></body></html>
